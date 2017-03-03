@@ -67,7 +67,10 @@
 </code></pre>
 <p>As you can see, the arg is <code>name</code> which tells <code>v-validate</code> to watch for whenever the name changes, this example might be a little bit silly, but you might need this functionality.</p>
 <blockquote>
-<p>The expression for both the arg and the <code>v-model</code> directive must be a simple dot notation expression, and that expression must exist on the instance. For example having inputs in a loop bound by the iterator won't work properly.</p>
+<p>The expression for both the arg and the <code>v-model</code> directive must be a simple dot notation expression, and that expression must exist on the instance. For example having inputs in a loop bound by the iterator won't work properly and will instead use the traditional listeners.</p>
+</blockquote>
+<blockquote>
+<p>You can debounce the validation using the <code>lazy</code> modifier on your v-model directive which will cause the validation to occur only when the user leaves the input.</p>
 </blockquote>
 <h2><a href="#validate-form">Validate Form Before Submit</a></h2>
 <p>You may want to trigger all inputs validation before submitting a form, maybe display an alert or prevent form submission if any errors are detected. This can be easily acheived using <code>validateAll</code> method.</p>

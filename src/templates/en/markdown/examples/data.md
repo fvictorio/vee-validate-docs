@@ -22,4 +22,6 @@ export default {
 
 As you can see, the arg is `name` which tells `v-validate` to watch for whenever the name changes, this example might be a little bit silly, but you might need this functionality.
 
-> The expression for both the arg and the `v-model` directive must be a simple dot notation expression, and that expression must exist on the instance. For example having inputs in a loop bound by the iterator won't work properly.
+> The expression for both the arg and the `v-model` directive must be a simple dot notation expression, and that expression must exist on the instance. For example having inputs in a loop bound by the iterator won't work properly and will instead use the traditional listeners.
+
+> You can debounce the validation using the `lazy` modifier on your v-model directive which will cause the validation to occur only when the user leaves the input.

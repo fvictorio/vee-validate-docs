@@ -234,6 +234,31 @@ export default {
             &lt;/p&gt;
         &lt;/div&gt;
     &lt;/form&gt;
+    &lt;form @submit.prevent=&quot;validateForm('form-2')&quot; class=&quot;columns column is-multiline is-12&quot; data-vv-scope=&quot;form-2&quot;&gt;
+        &lt;legend&gt;Form 2&lt;/legend&gt;
+        &lt;div class=&quot;column is-12&quot;&gt;
+            &lt;label class=&quot;label&quot;&gt;Email&lt;/label&gt;
+            &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
+                &lt;input name=&quot;email&quot; v-validate=&quot;'required|email'&quot; :class=&quot;{'input': true, 'is-danger': errors.has('form-2.email') }&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
+                &lt;i v-show=&quot;errors.has('form-2.email')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
+                &lt;span v-show=&quot;errors.has('form-2.email')&quot; class=&quot;help is-danger&quot;&gt;{{&quot;{&quot; + &quot;{ errors.first('form-2.email') }&quot; + &quot;}&quot;}}&lt;/span&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;column is-12&quot;&gt;
+            &lt;label class=&quot;label&quot;&gt;Password&lt;/label&gt;
+            &lt;p class=&quot;control has-icon has-icon-right&quot;&gt;
+                &lt;input name=&quot;password&quot; v-validate=&quot;'required|min:6'&quot; :class=&quot;{'input': true, 'is-danger': errors.has('form-2.password') }&quot; type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;
+                &lt;i v-show=&quot;errors.has('form-2.password')&quot; class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;
+                &lt;span v-show=&quot;errors.has('form-2.password')&quot; class=&quot;help is-danger&quot;&gt;{{&quot;{&quot; + &quot;{ errors.first('form-2.password') }&quot; + &quot;}&quot;}}&lt;/span&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;column is-12&quot;&gt;
+            &lt;p class=&quot;control&quot;&gt;
+                &lt;button class=&quot;button is-primary&quot; type=&quot;submit&quot; name=&quot;button&quot;&gt;Sign up&lt;/button&gt;
+                &lt;button class=&quot;button is-danger&quot; type=&quot;button&quot; name=&quot;button&quot; @click=&quot;errors.clear('form-2')&quot;&gt;Clear&lt;/button&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
 &lt;/div&gt;
 </div></code-example><h2><a href="#coupon-example">Async Validation</a></h2>
 <p>Let's say you want to validate something specific to your app domain that isn't provided by the default validators, for example lets validate a user coupon on checkout. If it is a valid coupon then you discount it for him, if not he pays the full price :(</p>

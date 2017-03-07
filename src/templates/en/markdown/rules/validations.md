@@ -62,7 +62,7 @@ The field under validation must have a numeric value bounded by a minimum value 
 
 ### [confirmed:{target}](#rule-confirmed)
 
-The field under validation must have the exact same value as the confirmation field.
+The field under validation must have the same value as the confirmation field.
 
 - `target:` The name of the confirmation field.
 

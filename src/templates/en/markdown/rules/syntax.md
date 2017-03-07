@@ -1,6 +1,6 @@
 ## [Syntax](#syntax)
 
-The validation rules have a very simple syntax similar to [Laravel validation syntax](https://laravel.com/docs/5.4/validation).
+The validation rules have a simple syntax similar to [Laravel validation syntax](https://laravel.com/docs/5.4/validation).
 
 A validation expression is a string of a series of validators separated by a pipe `|`:
 

@@ -66,3 +66,26 @@ A working example can be found [here](examples#locale-example)
 ## [Localized Files](#localized-files)
 
 In the [`dist/locale`](https://github.com/logaretm/vee-validate/tree/master/dist/locale) directory of this plugin, is a collection of localized files. If you can't find your locale, you could help this plugin by contributing a localized version to the [repo](https://github.com/logaretm/vee-validate). I will happily accept it.
+
+You can import those locales like this:
+
+```js
+import ar from 'vee-validate/dist/locale/ar';
+import { Validator } from 'vee-validate';
+
+// Add locale helper.
+Validator.addLocale(ar);
+```
+
+You must note that the locale files export the following object structure:
+
+```js
+export default {
+  name: '{locale}',
+  messages: {
+    // ...
+  }
+};
+```
+
+Also note that if imported via script tags they will automatically installed if `VeeValidate` is avaliable globally.

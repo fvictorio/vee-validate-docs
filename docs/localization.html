@@ -47,6 +47,22 @@ Validator.setLocale('ar');
 <p>A working example can be found <a href="examples#locale-example">here</a></p>
 <h2><a href="#localized-files">Localized Files</a></h2>
 <p>In the <a href="https://github.com/logaretm/vee-validate/tree/master/dist/locale"><code>dist/locale</code></a> directory of this plugin, is a collection of localized files. If you can't find your locale, you could help this plugin by contributing a localized version to the <a href="https://github.com/logaretm/vee-validate">repo</a>. I will happily accept it.</p>
+<p>You can import those locales like this:</p>
+<pre><code class="highlight-js">import ar from 'vee-validate/dist/locale/ar';
+import { Validator } from 'vee-validate';
+
+// Add locale helper.
+Validator.addLocale(ar);
+</code></pre>
+<p>You must note that the locale files export the following object structure:</p>
+<pre><code class="highlight-js">export default {
+  name: '{locale}',
+  messages: {
+    // ...
+  }
+};
+</code></pre>
+<p>Also note that if imported via script tags they will automatically installed if <code>VeeValidate</code> is avaliable globally.</p>
 </div></div></div></div></div></svg><script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();
 Array.from(document.querySelectorAll('h2')).forEach(h => {
   h.classList.add('title');

@@ -5,7 +5,7 @@ The [English messages file](https://github.com/logaretm/vee-validate/blob/master
 
 ## [Attributes (data-vv-as)](#attributes-data-vv-as)
 
-Seeing 'first_name' in your error messages can't be very good for your user experience, this plugin offer a couple of solutions: You can use the `data-vv-as` attribute on your field and give it a better name for your users, it would look like this: 
+Seeing 'first_name' in your error messages can't be very good for your user experience, this plugin offer a couple of solutions: You can use the `data-vv-as` attribute on your field and give it a better name for your users, it would look like this:
 
 ```html
   <input v-validate data-vv-rules="alpha|min:3" data-vv-as="First Name" name="first_name" type="text">
@@ -22,7 +22,7 @@ Here is a little code example on how would you add support for your localized me
 ```js
 import Vue from 'vue';
 import VeeValidate from 'vee-validate';
-import messagesAr from './strings/validator/messages/ar.js'; 
+import messagesAr from './strings/validator/messages/ar.js';
 import attributesAr from './strings/validator/attributes/ar.js';
 import attributesEn from './strings/validator/attributes/en.js';
 // Pass options to make all validators use the arabic language, also merge the english and arabic attributes with the internal dictionary.
@@ -65,7 +65,7 @@ A working example can be found [here](examples#locale-example)
 
 ## [Localized Files](#localized-files)
 
-In the [`dist/locale`](https://github.com/logaretm/vee-validate/tree/master/dist/locale) directory of this plugin, is a collection of localized files. If you can't find your locale, you could help this plugin by contributing a localized version to the [repo](https://github.com/logaretm/vee-validate). I will happily accept it.
+In the [`locale`](https://github.com/logaretm/vee-validate/tree/master/locale) directory of this plugin, is a collection of localized files. If you can't find your locale, you could help this plugin by contributing a localized version to the [repo](https://github.com/logaretm/vee-validate). I will happily accept it.
 
 You can import those locales like this:
 

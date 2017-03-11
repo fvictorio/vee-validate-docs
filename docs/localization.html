@@ -11,7 +11,7 @@ The <a href="https://github.com/logaretm/vee-validate/blob/master/dist/locale/en
 <p>Here is a little code example on how would you add support for your localized messages and attributes. Note that this is the entry point of your application.</p>
 <pre><code class="highlight-js">import Vue from 'vue';
 import VeeValidate from 'vee-validate';
-import messagesAr from './strings/validator/messages/ar.js'; 
+import messagesAr from './strings/validator/messages/ar.js';
 import attributesAr from './strings/validator/attributes/ar.js';
 import attributesEn from './strings/validator/attributes/en.js';
 // Pass options to make all validators use the arabic language, also merge the english and arabic attributes with the internal dictionary.
@@ -46,7 +46,7 @@ Validator.setLocale('ar');
 <p>You will get a warning if you set the locale to one that has not been merged in the dictionary yet, any messages generated will fallback to English.</p>
 <p>A working example can be found <a href="examples#locale-example">here</a></p>
 <h2><a href="#localized-files">Localized Files</a></h2>
-<p>In the <a href="https://github.com/logaretm/vee-validate/tree/master/dist/locale"><code>dist/locale</code></a> directory of this plugin, is a collection of localized files. If you can't find your locale, you could help this plugin by contributing a localized version to the <a href="https://github.com/logaretm/vee-validate">repo</a>. I will happily accept it.</p>
+<p>In the <a href="https://github.com/logaretm/vee-validate/tree/master/locale"><code>locale</code></a> directory of this plugin, is a collection of localized files. If you can't find your locale, you could help this plugin by contributing a localized version to the <a href="https://github.com/logaretm/vee-validate">repo</a>. I will happily accept it.</p>
 <p>You can import those locales like this:</p>
 <pre><code class="highlight-js">import ar from 'vee-validate/dist/locale/ar';
 import { Validator } from 'vee-validate';
